@@ -30,7 +30,7 @@ public final class WriteAsyncExample {
 
             long endTime = System.currentTimeMillis();
             long timeTaken = endTime - startTime;
-            System.out.println( "> TimeTaken is " + ( timeTaken / 1000 ) + " seconds for " + recordMax + " docs");
+            System.out.println( "> TimeTaken " + ( timeTaken / 1 ) + " ms for " + recordMax + " docs");
         } catch (Exception e) {
             e.printStackTrace();
         }

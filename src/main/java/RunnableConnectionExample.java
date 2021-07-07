@@ -31,7 +31,7 @@ public class RunnableConnectionExample
         monitor.waitTillComplete();
         long endTime = System.currentTimeMillis();
         long timeTaken = endTime - startTime;
-        System.out.println( "> TimeTaken is " + ( timeTaken / 1000 ) + " seconds for " + numberOfRecords + " records.");
+        System.out.println( "> TimeTaken " + ( timeTaken / 1 ) + " ms for " + numberOfRecords + " records.");
     }
 }
 
