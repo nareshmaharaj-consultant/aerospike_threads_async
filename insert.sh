@@ -1,0 +1,6 @@
+THREADS=$1
+INSERTS=$2
+HOSTS_CSV=$3
+NAMESPACE=$4
+SET=$5
+java -jar out/artifacts/async_jar/async.jar $THREADS $INSERTS $HOSTS_CSV $NAMESPACE $SET
