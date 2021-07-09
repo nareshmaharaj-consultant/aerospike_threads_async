@@ -67,7 +67,8 @@ public class RunnableConnectionExample
 
         System.out.println(
                 "NumberOfClient Threads:" + numberOfClients +
-                "\nNumberOfRecords to Insert:" + numberOfRecords
+                "\nNumberOfRecords to Insert:" + numberOfRecords +
+                "\nStarting key:" + startKeyFrom
         );
         // System.exit(0);
 
