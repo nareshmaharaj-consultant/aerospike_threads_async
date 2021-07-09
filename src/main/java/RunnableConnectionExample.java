@@ -12,6 +12,7 @@ public class RunnableConnectionExample
     static AtomicLong start = new AtomicLong(0);
     static int numberOfClients = 10;
     static int numberOfRecords = 1000;
+    static int startKeyFrom = 0;
     static int port = 3000;
 
     static Host[] hosts = new Host[] {
@@ -57,6 +58,10 @@ public class RunnableConnectionExample
             set = args[4];
         }
 
+        if ( args.length >= 6 ) {
+            startKeyFrom = Integer.parseInt(args[5]);
+        }
+
         int numberOfRecordsPerThread = numberOfRecords / numberOfClients;
         long startTime = System.currentTimeMillis();
 
@@ -72,7 +77,7 @@ public class RunnableConnectionExample
                     new RunnableConnection(
                             "Aerospike Connection: ".concat(Integer.toString(i)),
                             numberOfRecordsPerThread,
-                            i * numberOfRecordsPerThread,
+                            i * numberOfRecordsPerThread + startKeyFrom,
                             monitor,
                             namespace,
                             set
