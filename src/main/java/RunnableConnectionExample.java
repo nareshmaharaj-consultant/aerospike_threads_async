@@ -66,6 +66,7 @@ public class RunnableConnectionExample
         long startTime = System.currentTimeMillis();
 
         System.out.println(
+                "version 1\n" +
                 "NumberOfClient Threads:" + numberOfClients +
                 "\nNumberOfRecords to Insert:" + numberOfRecords +
                 "\nStarting key:" + startKeyFrom
